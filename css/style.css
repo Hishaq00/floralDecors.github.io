@@ -102,11 +102,11 @@ input[type="password"] {
   left: 0;
   top: 0;
   width: 50%; /* Full width */
-  height: 95%; /* Full height */
+  height: 90%; /* Full height */
   overflow: hidden; /*Enable scroll if needed*/
   /* background-color: #474e5d; */
-  padding-top: 10px;
-  margin-top: 3%;
+  padding-top: 50px;
+  margin-top: 2%;
   margin-left: 22%;
 }
 .sign-modal-content {
@@ -114,7 +114,7 @@ input[type="password"] {
   margin: 2% auto 10% auto;/*5% from the top, 15% from the bottom and centered*/
   border: 1px solid #888;
   width: 90%; /* Could be more or less, depending on screen size */
-  height: 95%;
+  height: 90%;
 }
 
 .cancelbtn {
@@ -213,7 +213,6 @@ span.psw {
 @media screen and (max-width: 768px) {
   .modal,
   .signmodal {
-    margin-top: 10%;
     width: 90%; /* Adjust the width as needed */
     margin-left: 5%; /* Center the modal */
     height: 100%;
@@ -225,43 +224,100 @@ span.psw {
 }
 #about {
   width: 100%;
-background-color: #dfa9a8;
+  background-color: #dfa9a8;
 }
-
-#about .container-fluid .col-md-4 {
-  position: relative;
-  margin: 30px;
-  background-color: rgb(161, 98, 98, 0.3);
-  height: 500px;
-  border: 1px solid #855353;
-  border-radius: 10px;
-  box-shadow: 30px 30px #855353;
-}
-#about .container-fluid .col-md-4 h2 {
-  color: #684040;
-  font-weight: 900;
-}
-#about .container-fluid .col-md-4 p {
-  color: #684040;
-  font-weight: 500;
-  font-size: 1.2em;
-}
-#about .container-fluid .col-md-6 {
+#about .row{
+  grid-gap: 8%;
+  display: flex;
   justify-content: center;
-  align-items: center;
-}
-#about .container-fluid .col-md-6 img {
-  height: 500px;
-  width: 400px;
-  border-radius: 150px 150px 0px 0px;
-  border: 10px solid #855353;
-}
+  }
+  #about .container-fluid .about {
+    position: relative;
+    width: 100%;max-width: 100%;
+    margin-left: 10%;
+  /* padding: 10%; */
+    background-color: rgb(161, 98, 98, 0.3);
+    height: 50%;
+    border: 1px solid #855353;
+    border-radius: 10px;
+    box-shadow: 30px 30px #855353;
+  }
+  #about .container-fluid .about h2 {
+    color: #684040;
+    font-weight: 900;
+  }
+  #about .container-fluid .about p {
+    color: #684040;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+  #about .container-fluid .girl {
+    justify-content: center;
+    align-items: center;
+  }
+  #about .container-fluid .girl img {
+    height: 500px;
+    width: 100%;
+    border-radius: 150px 150px 0px 0px;
+    border: 10px solid #855353;
+  }
+ 
+  @media only screen and (max-width: 600px) and (min-width: 320px) {
+    #about .container-fluid .about {
+      margin-top: 5%;
+      width: 100%;
+      min-width: 70%;
+      box-shadow: 5px 5px #684040;
+      
+    }
+    .stem img{
+      
+      width: 100%;
+      max-width: 70%;
+    }
+    #about .container-fluid .girl img {
+      width: 100%;
+      min-width: 66%;
+      margin-bottom: 5%;
+      height: 350px;
+    }
+    #about .container-fluid .about p {
+     
+      font-size: 15px;
+    }
+    #border img{
+      width: 100%;
+      max-width: 90%;
+    }
+  }
+  @media only screen and (max-width: 1200px) and (min-width: 960px) {
+    #about .container-fluid .about {
+      margin-top: 5%;
+      width: 60%;
+      min-width: 50%;
+      box-shadow: 5px 5px #684040;
+    }
+    #about .container-fluid .girl img {
+      width: 100%;
+      min-width: 66%;
+      margin-bottom: 5%;
+      height: 350px;
+    }
+    #about .container-fluid .about p {
+     
+      font-size: 15px;
+    }
+    #border img{
+      width: 100%;
+      max-width: 90%;
+    }
+  }
 /* Flower Border */
 #border {
   display: flex;
   position: relative;
   justify-content: center;
-  /* background-color: #eeb2b2; */
+
   background-color: #dfa9a8;
 }
 
@@ -303,7 +359,7 @@ background-color: #dfa9a8;
   background-color: #eeb2b2;
   border: 1px solid #684040;
   color: #684040;
-  margin-left: 27%;
+  margin-left: 38%;
   border-radius: 10px;
 }
 
@@ -404,6 +460,27 @@ background-color: #dfa9a8;
 .flip-card-back h4 {
   font-family: "Yeseva One", serif;
   font-size: 1.7em;
+}
+@media only screen and (max-width: 480px) {
+  #occasion .row h2 {
+    color: #ae6666;
+    font-weight: 900;
+    /* text-decoration: underline; */
+    font-family: "Yeseva One", serif;
+    font-size: 2em;
+}
+.card {
+  padding: 10px;
+  height: 110%;
+  max-height: 100%;
+  width: 100%;
+  max-width: 100%;
+
+}
+#occasion .btn {
+ height: 50pxx;
+ 
+}
 }
 .slides {
   height: 66vh;
@@ -551,32 +628,23 @@ background-color: #dfa9a8;
       margin-top: 10px;
   }
   
-  @media screen and (max-width: 768px) {
-      .modal-images .gallery {
-          flex: 1 1 45%;
-      }
-  }
-  
-  @media screen and (max-width: 480px) {
-      .modal-images .gallery {
-          flex: 1 1 100%;
-      }
-  }
-  
-    /* Add the responsive adjustments here */
-    @media only screen and (max-width: 768px) {
-      .responsive {
-        width: 100%;
-        height: 100%;
-        margin: 10px 0px;
-      }
+  @media only screen and (max-width: 768px) {
+    .gallery{
+    
+      width: 100%;
+      margin-right: 18%;
     }
-  
-    @media only screen and (max-width: 480px) {
-      .responsive {
-        width: 100%;
-      }
+    .container .responsive{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin: 10px 0px;
+      max-width: 100%;
+      justify-content: center;
     }
+  }
+
+   
   /* comparision  */
   .containertp{
     max-width: 1200px;
@@ -593,7 +661,6 @@ background-color: #dfa9a8;
 }
 
 .product-img {
- 
     max-width: 100px;
     height: auto;
     border: 2px solid #fff;
@@ -620,49 +687,103 @@ background-color: #dfa9a8;
     text-align: left;
     display: none;
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 960px) and (min-width: 768px) {
+  .containertp {
+    width: 100%;
+    max-width: 90;
+  }
+  .containertp label{
+    display: block;
+margin-top: 2%;
+  }
+  .containertp .compare{
+    display: block;
+    margin-left: 40%;
+    margin-top: 2%;
+  }
     .compare-box {
         flex: 1 1 100%;
     }
+   
 }
-/* contact us  */
+/*contact us  */
 #contact {
   background-color: #f2e3e3;
   width: 100%;
+  height: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
 }
 
 #contact .container {
-  margin: 0px 10px;
+  display: flex;
+  /* margin: 0 10px; */
+  width: 50%;
+  max-width: 40%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+border: 1px solid #684040;
+border-radius: 20px;
+box-shadow: 10px 10px #855353;
+color: #6b3d3d;
+margin-bottom: 5%;
+}
+
+#contact input,
+#contact textarea {
+  background: transparent;
+  border: 1px solid #6b3d3d;
+  color: #6b3d3d;
   width: 100%;
-  max-width: 90%;
-}
 
-#contact .col-md-4 {
-  border: 1px solid #684040;
-  border-radius: 20px;
-  box-shadow: 10px 10px #855353;
-  color: #6b3d3d;
-  justify-content: space-evenly;
-  height: 490px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-
-#contact .col-md-4 input {
-  background: transparent;
-  border: 1px solid #6b3d3d;
+@media only screen and (max-width: 1200px) and (min-width: 760px) {
+  #contact .container {
+    display: flex;
+   
+    width: 100%;
+    max-width: 60%;
+ 
+  }
+  #contact input,
+  #contact textarea {
+  
+    width: 100%;
+    max-width: 100%;
+  }
 }
-
-#contact .col-md-4 textarea {
-  background: transparent;
-  border: 1px solid #6b3d3d;
-  color: #6b3d3d;
+@media  (max-width: 480px){
+  #contact .container {
+    display: flex;
+   
+    width: 100%;
+    max-width: 90%;
+ 
+  }
+  #contact input,
+  #contact textarea {
+  
+    width: 100%;
+    max-width: 100%;
+  }
 }
-
-#contact .col-md-4 .btn {
+#contact.btn {
   background-color: #6b3d3d;
   border: 1px solid #6b3d3d;
-  /* margin-left: 25%; */
   color: #fac7c7;
+  padding: 10px;
+  cursor: pointer;
+  align-self: center;
+  width: 50%;
+  text-align: center;
 }
+
 #Png-flower .container-fluid {
   width: 100%;
   background-color: #a55e5e;
@@ -723,116 +844,86 @@ footer .icons{
 footer .icons svg{
   fill: #ccc;
 }
-@media (max-width: 768px) {
-  .navbar .nav-link {
-    font-size: 1em;
-  }
+
+@media  (max-width: 760px)  {
   #cover .container-fluid .container h1 {
-    font-size: 2.5rem;
-    margin-top: 13%;
+    font-size: 2.5em;
+    margin-top: 10%;
+    width: 100%;
+    max-width: 90%;
   }
-  #cover .container-fluid .container p {
+  #cover .container-fluid .container .des{
+    width: 100%;
+    max-width: 90%;
     font-size: 1.5em;
+  }
+  #cover .container-fluid .container .description p{
+    font-size: 1px;
   }
   .login, .signin {
     width: 100%;
   }
-  .modal-content, .sign-modal-content {
+  .modal-content{
     width: 90%;
+    height: 50%;
+  }
+   .sign-modal-content {
+    margin-top: 10%;
+    width: 90%;
+    height: 70%;
   }
 }
 
 @media (max-width: 480px) {
-  .navbar .nav-link {
-    font-size: 0.9em;
-  }
+  /* .navbar  {
+   height: 50px;
+  } */
+  .navbar .navbar-brand img{
+    height: 30px;
+   }
+   #cover .container{
+    margin-top: 5%;
+   }
   #cover .container-fluid .container h1 {
-    font-size: 2rem;
-  }
-  #cover .container-fluid .container p {
-    font-size: 1.2em;
-  }
-}
-@media (max-width: 768px) {
-  #about .container-fluid .col-md-4 {
-    margin: 20px auto;
-    box-shadow: 15px 15px #855353;
-  }
-  #about .container-fluid .col-md-6 img {
-    width: 100%;
-  }
-  #about .container-fluid .col-md-4 p {
-    font-size: 1em;
-  }
-  #border{
-    width: 100%;
-    /* max-width: 50px; */
-  }
-  #border img{
-    width: 100%;
-    /* max-width: 50px; */
-  }
-}
-
-@media (max-width: 480px) {
-  #border{
-    width: 50%;
-    max-width: 5px;
-  }
-  #about .container-fluid .col-md-4 {
-    margin: 10px auto;
-    box-shadow: 10px 10px #855353;
-    padding: 15px;
-  }
-  #about .container-fluid .col-md-4 h2 {
     font-size: 1.5em;
   }
-  #about .container-fluid .col-md-4 p {
-    font-size: 0.9em;
-  }
-  #about .container-fluid .col-md-6 img {
+  #cover .container-fluid .container p {
+    font-size: 1em;
     width: 100%;
-    max-width: 300px;
-  }
-  #contact .container{
-    display: block;
-  }
-}
-/* Media Queries */
-@media (max-width: 768px) {
-  #contact .container {
-    padding: 0;
-  }
-
-  #contact .col-md-4 {
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  #contact .col-md-8 {
-    margin-top: 20px;
+    max-width: 90%;
+    
   }
 }
 
-@media (max-width: 576px) {
-  #contact .col-md-4 {
-    padding: 20px;
-  }
-}
- /* Your existing styles */
-    /* Add the responsive adjustments here */
-    @media (max-width: 768px) {
+
+
+
+    @media only screen and (max-width: 600px)and (min-width: 320px){
       .card {
         width: 90%;
         height: 30%;
       }
+      .card .btn{
+      margin-left: 500px;
+      }
       .flip-card {
         width: 100%;
+        min-height: 100%;
         /* height: 50%; */
       }
       .flip-card img {
         width: 100%;
         height: auto;
       }
+      .flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+ 
+}
+.flip-card-back h4{
+
+  font-size: 1.5em;
+}
     }
 
